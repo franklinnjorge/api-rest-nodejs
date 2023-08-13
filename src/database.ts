@@ -5,7 +5,6 @@ if (!process.env.DATABASE_URL) {
   throw new Error('database info not found')
 }
 
-console.log(process.env)
 export const config: Knex.Config = {
   client: 'sqlite',
   connection: {

@@ -1,13 +1,20 @@
 import fastify from 'fastify'
-import { knex } from './database'
 import { env } from '../env'
+import { transactionsRoutes } from './routes/transactions'
 
 const app = fastify()
 
-app.get('/hello', async () => {
+/* app.get('/hello', async () => {
   const tables = await knex('sqlite_schema').select('*')
-  return tables
-})
+  const transactions = await knex('transactions').insert({
+    id: crypto.randomUUID(),
+    title: 'Transação teste',
+    amount: 1000,
+  })
+  return transactions
+}) */
+
+app.register(transactionsRoutes)
 
 app
   .listen({
