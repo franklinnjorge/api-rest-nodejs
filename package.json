@@ -17,14 +17,17 @@
     "@babel/eslint-parser": "^7.22.10",
     "@rocketseat/eslint-config": "^2.1.0",
     "@types/node": "^20.4.9",
+    "@types/supertest": "^2.0.12",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.46.0",
     "supertest": "^6.3.3",
     "tsup": "^7.2.0",
     "tsx": "^3.12.7",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.3"
   },
   "dependencies": {
+    "@fastify/cookie": "^9.0.4",
     "dotenv": "^16.3.1",
     "fastify": "^4.21.0",
     "knex": "^2.5.1",
